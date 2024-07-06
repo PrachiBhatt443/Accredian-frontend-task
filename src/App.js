@@ -1,11 +1,12 @@
-// src/App.js
 import React from 'react';
-import HeroSection from './components/HeroSection';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
     <div>
-      <HeroSection />
+      <Hero />
+      <Footer/>
     </div>
   );
 };

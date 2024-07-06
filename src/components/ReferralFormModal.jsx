@@ -1,4 +1,3 @@
-// // src/components/ReferralFormModal.jsx
 import React, { useState } from 'react';
 import { Modal, Box, Typography, TextField, Button } from '@mui/material';
 import axios from 'axios';
@@ -75,7 +74,13 @@ const ReferralFormModal = ({ open, handleClose }) => {
             onChange={(e) => setRefereeEmail(e.target.value)}
           />
           {error && <Typography color="error">{error}</Typography>}
-          <Button type="submit" variant="contained" color="primary" fullWidth sx={{ marginTop: 2 }}>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            fullWidth
+            sx={{ marginTop: 2 }}
+          >
             Send Referral
           </Button>
         </form>
