@@ -85,30 +85,25 @@ const Benefits = () => {
 
   const filteredBenefits = selectedProgram === 'ALL PROGRAMS'
     ? referralBenefits
-    : referralBenefits.filter(benefit => benefit.category === selectedProgram);
+    : referralBenefits.filter((benefit) => benefit.category === selectedProgram);
 
   return (
-    <Box sx={{ 
-        // backgroundColor: 'rgba(235, 243, 255, 0.35)',
-        
-        py: 6 }}>
+    <Box sx={{ py: 6 }}>
       <Container maxWidth="lg">
         <Typography variant="h4" align="center" gutterBottom>
           What Are The Referral Benefits?
         </Typography>
         <Divider sx={{ mb: 4 }} />
-
         <Grid container spacing={4}>
-          <Grid item xs={11} md={3}>
+          <Grid item xs={12} md={3}>
             <Box
               sx={{
                 backgroundColor: '#FFFFFF',
-                // p: 3,
                 borderRadius: '0px 0px 14px 14px',
                 boxShadow: '0px 1px 24.4px 1px rgba(0, 0, 0, 0.16)',
-                width: '270px',
-                // height: '450px',
-                opacity: '1',
+                width: '100%',
+                maxWidth: 270,
+                margin: 'auto',
               }}
             >
               <List>
@@ -125,9 +120,7 @@ const Benefits = () => {
             </Box>
           </Grid>
 
-          <Grid item 
-          xs={12} md={9}
-          >
+          <Grid item xs={12} md={9}>
             <Box
               sx={{
                 backgroundColor: 'rgba(235, 243, 255, 0.35)',
@@ -141,7 +134,6 @@ const Benefits = () => {
                   <TableHead>
                     <TableRow>
                       <TableCell
-                        // align="left"
                         sx={{
                           borderRight: '1px solid rgba(224, 224, 224, 1)',
                           backgroundColor: 'rgba(26, 115, 232, 0.35)',
@@ -179,14 +171,14 @@ const Benefits = () => {
                     {filteredBenefits.map((benefit, index) => (
                       <TableRow key={index}>
                         <TableCell
-                            sx={{
+                          sx={{
                             borderRight: '1px solid rgba(224, 224, 224, 1)',
                             display: 'flex',
-                            alignItems: 'center'
-                            }}
+                            alignItems: 'center',
+                          }}
                         >
-                            <SchoolIcon fontSize="small" sx={{ mr: 1 }} />
-                            <Typography variant="body2">{benefit.program}</Typography>
+                          <SchoolIcon fontSize="small" sx={{ mr: 1 }} />
+                          <Typography variant="body2">{benefit.program}</Typography>
                         </TableCell>
                         <TableCell
                           align="center"

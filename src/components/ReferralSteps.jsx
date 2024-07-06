@@ -1,18 +1,18 @@
 import React from 'react';
 import { Container, Grid, Typography } from '@mui/material';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import RewardsIcon from '@mui/icons-material/EmojiEvents';
+import ContactMailIcon from '@mui/icons-material/ContactMail';  
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';  
 import ShareIcon from '@mui/icons-material/Share';
 import referImage from '../assets/how.png';
 
 const steps = [
   {
-    icon: <AttachMoneyIcon sx={{ fontSize: 40, color: '#1976d2' }} />,
+    icon: <ContactMailIcon sx={{ fontSize: 40, color: '#1976d2' }} />,  
     title: 'Submit Referrals',
     description: 'Submit referrals easily via our website’s referral section.',
   },
   {
-    icon: <RewardsIcon sx={{ fontSize: 40, color: '#1976d2' }} />,
+    icon: <EmojiEventsIcon sx={{ fontSize: 40, color: '#1976d2' }} />,  
     title: 'Earn Rewards',
     description: 'Earn rewards once your referral joins an Accredian program.',
   },
@@ -22,6 +22,7 @@ const steps = [
     description: 'Both parties receive a bonus 30 days after program enrollment.',
   },
 ];
+
 
 const ReferralSteps = () => {
   return (

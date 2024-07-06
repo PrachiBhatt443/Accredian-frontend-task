@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Tabs, Tab, Box } from '@mui/material';
+import { Container, Tabs, Tab, Box, Grid } from '@mui/material';
 import ReferralFormModal from './ReferralFormModal';
 import ReferEarn from './ReferEarn';
 import Benefits from './Benefits';
@@ -52,23 +52,34 @@ const HeroSection = () => {
         </Tabs>
       </Container>
       <Box sx={{ marginTop: 4 }}>
-        <div ref={referEarnRef}>
-          <ReferEarn handleOpen={handleOpen} />
-        </div>
-        <HowDoIRefer/>
-        <div ref={benefitsRef}>
-          <Benefits />
-        </div>
-        <div ref={faqRef}>
-          <FAQ />
-        </div>
-        <div ref={supportRef}>
-          <Support />
-        </div>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <div ref={referEarnRef}>
+              <ReferEarn handleOpen={handleOpen} />
+            </div>
+          </Grid>
+          <Grid item xs={12}>
+            <HowDoIRefer />
+          </Grid>
+          <Grid item xs={12}>
+            <div ref={benefitsRef}>
+              <Benefits />
+            </div>
+          </Grid>
+          <Grid item xs={12}>
+            <div ref={faqRef}>
+              <FAQ />
+            </div>
+          </Grid>
+          <Grid item xs={12}>
+            <div ref={supportRef}>
+              <Support />
+            </div>
+          </Grid>
+        </Grid>
       </Box>
 
       <ReferralFormModal open={open} handleClose={handleClose} />
-
     </>
   );
 };

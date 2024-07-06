@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button, Modal } from '@mui/material';
+import { Box, Typography, Button, Modal, useMediaQuery, useTheme } from '@mui/material';
 import ReferralSteps from './ReferralSteps';
+import ReferralStepsMobile from './ReferralStepsMobile';
 import ReferralFormModal from './ReferralFormModal';  
 
 const HowDoIRefer = () => {
   const [open, setOpen] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -44,7 +47,7 @@ const HowDoIRefer = () => {
       >
         Refer your friends to our program and earn rewards! Simply fill out the form and share your referral link.
       </Typography>
-      <ReferralSteps />
+      {isMobile ? <ReferralStepsMobile /> : <ReferralSteps />}
       <Button
         variant="contained"
         color="primary"

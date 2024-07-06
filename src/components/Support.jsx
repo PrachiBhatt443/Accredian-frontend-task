@@ -1,27 +1,32 @@
 import React, { useState, useRef } from 'react';
-import { Container, Typography, Box, TextField, Button, Grid, IconButton } from '@mui/material';
-import { Email, Person, Message, HeadsetMic } from '@mui/icons-material';
-import call from '../assets/call.png'
+import { Container, Typography, Box, TextField, Button, Grid } from '@mui/material';
+import { Email, Person, Message } from '@mui/icons-material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import call from '../assets/call.png';
+
 const Support = () => {
   const [formVisible, setFormVisible] = useState(false);
-  const formRef = useRef(null); // Create a ref for the form
+  const formRef = useRef(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleGetInTouchClick = () => {
     setFormVisible(!formVisible);
     if (!formVisible && formRef.current) {
-      formRef.current.scrollIntoView({ behavior: 'smooth' }); // Scroll to the form when it becomes visible
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <Box
       sx={{
-        margin:10,
-        width:'1300px',
-        height:'210px',
+        margin: isMobile ? 2 : 10,
+        width: isMobile ? '100%' : '1300px',
+        height: isMobile ? 'auto' : '210px',
         background: 'linear-gradient(45deg, #4A90E2 30%, #50E3C2 90%)',
         color: 'white',
-        paddingLeft: '10px',
+        padding: isMobile ? '10px' : 'auto',
         borderRadius: '10px',
         boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
         textAlign: 'left',
@@ -31,36 +36,34 @@ const Support = () => {
       <Container maxWidth="lg">
         <Grid container spacing={7} alignItems="center">
           <Grid item>
-                <Box
-                sx={{
-                width: 72,  
-                height: 72, 
+            <Box
+              sx={{
+                width: 72,
+                height: 72,
                 backgroundImage: `url(${call})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 borderRadius: 1,
-                //   boxShadow: 2,
-                }}
+              }}
             />
           </Grid>
-            <Grid item>
-              <Box>
-                <Typography variant="h4" component="h2" gutterBottom>
-                  Want to delve deeper into the program?
-                </Typography>
-                <Typography variant="h5" component="p" paragraph>
-                  Share your details to receive expert insights from our program team!
-                </Typography>
-              </Box>
-            </Grid>
-          <Grid item >
+          <Grid item>
+            <Box>
+              <Typography variant="h4" component="h2" gutterBottom>
+                Want to delve deeper into the program?
+              </Typography>
+              <Typography variant="h5" component="p" paragraph>
+                Share your details to receive expert insights from our program team!
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item>
             <Button
               onClick={handleGetInTouchClick}
               variant="contained"
-            //   color="secondary"
-              sx={{ 
-                px: 4, 
-                py: 1.5, 
+              sx={{
+                px: 4,
+                py: 1.5,
                 fontSize: '16px',
                 fontWeight: 'bold',
                 borderRadius: '5px',
@@ -74,11 +77,10 @@ const Support = () => {
             </Button>
           </Grid>
 
-          {/* Conditionally render the form */}
           {formVisible && (
             <Grid item xs={12}>
               <Box
-                ref={formRef} // Add ref to the form container
+                ref={formRef}
                 component="form"
                 sx={{
                   mt: 4,
@@ -130,10 +132,10 @@ const Support = () => {
                   type="submit"
                   variant="contained"
                   color="secondary"
-                  sx={{ 
-                    mt: 2, 
-                    px: 4, 
-                    py: 1.5, 
+                  sx={{
+                    mt: 2,
+                    px: 4,
+                    py: 1.5,
                     fontSize: '16px',
                     fontWeight: 'bold',
                     borderRadius: '5px',
