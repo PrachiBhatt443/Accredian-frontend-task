@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# 🎉 Welcome to the Accredian Refer and Earn Page! 🎉
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Are you ready to unlock rewards while sharing the love? Welcome to the **Accredian Refer and Earn** page, a beautifully crafted, responsive platform designed to make referring friends a breeze! With our user-friendly interface, you can easily refer others and earn exciting rewards. 
 
-## Available Scripts
+## 🚀 Tech Stack
 
+Our project is built with a powerful combination of technologies to ensure a seamless experience:
+
+- **Frontend:** React, Material-UI, Axios
+- **Backend:** Node.js, Express, MySQL, Prisma
+- **Hosting:** Clever Cloud
+
+## 🌟 Key Features
+
+### 1. **Referral Form**
+Capture the magic of referrals with our intuitive referral form modal! With built-in form validation, you can easily input referrer and referee details without a hitch.
+
+### 2. **Engaging User Experience**
+We believe in keeping users engaged! Our dynamic content loading feature highlights four unique offerings, complete with vibrant background colors that change to keep things fresh and exciting.
+
+### 3. **Robust Backend Integration**
+Our powerful backend can handle over 500 referral submissions, ensuring that every referral is tracked and rewarded. Say goodbye to missed opportunities!
+
+## 📦 Getting Started
+
+Ready to dive in? Here’s how to get your local copy up and running:
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PrachiBhatt443/Accredian-frontend-task.git# Getting Started with Create React App
+2. Navigate to the project directory:
+   ```bash
+   cd Accredian-frontend-task
+3. Install the dependencies:
+   ```bash
+   npm install
+4. Running the App
 In the project directory, you can run:
+``bash
+npm start
 
-### `npm start`
+This command will start the app in development mode. Open http://localhost:3000 in your browser to see it in action!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<meta name="description" content="Join the Accredian Refer and Earn program! Refer friends and earn rewards seamlessly with our user-friendly platform.">
+<meta name="keywords" content="Accredian, Refer and Earn, rewards, referral program, React, Material-UI">
+<meta name="author" content="Prachi Bhatt">
