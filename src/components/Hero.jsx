@@ -30,7 +30,7 @@ const HeroSection = () => {
       case 1:
         benefitsRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
-      case 2:
+      case 
         faqRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
       case 3:
@@ -52,7 +52,6 @@ const HeroSection = () => {
           width: '100%',
           '& .MuiTabs-flexContainer': {
             // flexDirection: isMobile ? 'column' : 'row',
-            
             justifyContent: 'center',
           },
           '& .MuiTab-root': {
