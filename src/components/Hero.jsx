@@ -51,7 +51,8 @@ const HeroSection = () => {
         sx={{
           width: '100%',
           '& .MuiTabs-flexContainer': {
-            flexDirection: isMobile ? 'column' : 'row',
+            // flexDirection: isMobile ? 'column' : 'row',
+            
             justifyContent: 'center',
           },
           '& .MuiTab-root': {
