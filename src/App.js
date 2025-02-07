@@ -3,7 +3,7 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Course from './components/Course';
+// import Course from './components/Course';
 const App = () => {
   return (
   <BrowserRouter>
@@ -14,7 +14,7 @@ const App = () => {
       <Routes>
           <Route path="/" element={<Hero />} />
           {/* <Route index element={<Home />} /> */}
-          <Route path="/courses" element={<Course/>} />
+          // <Route path="/courses" element={<Course/>} />
         {/* </Route> */}
       </Routes>
       <Footer/>
