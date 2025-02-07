@@ -43,7 +43,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <Container sx={{ textAlign: 'center', marginTop: 8 }}>
+      <Container sx={{ textAlign: 'center', marginTop: 4 }}>
       <Tabs
         value={value}
         onChange={handleChange}
