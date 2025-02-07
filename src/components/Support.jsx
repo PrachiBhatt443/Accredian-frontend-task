@@ -21,60 +21,71 @@ const Support = () => {
   return (
     <Box
       sx={{
-        margin: isMobile ? 2 : 10,
-        width: isMobile ? '100%' : '1300px',
-        height: isMobile ? 'auto' : '210px',
+        width: '100%',
         background: 'linear-gradient(45deg, #4A90E2 30%, #50E3C2 90%)',
         color: 'white',
-        padding: isMobile ? '10px' : 'auto',
+        padding: isMobile ? '20px' : '40px',
         borderRadius: '10px',
         boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
         textAlign: 'left',
-        position: 'relative',
       }}
     >
-      <Container maxWidth="lg">
-        <Grid container spacing={7} alignItems="center">
-          <Grid item>
+      <Container>
+        <Grid
+          container
+          spacing={4}
+          direction={isMobile ? 'column' : 'row'}
+          alignItems="center"
+        >
+          <Grid item xs={12} sm="auto">
             <Box
               sx={{
                 width: 72,
                 height: 72,
                 backgroundImage: `url(${call})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 borderRadius: 1,
+                margin: '0 auto',
               }}
             />
           </Grid>
-          <Grid item>
-            <Box>
-              <Typography variant="h4" component="h2" gutterBottom>
-                Want to delve deeper into the program?
-              </Typography>
-              <Typography variant="h5" component="p" paragraph>
-                Share your details to receive expert insights from our program team!
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item>
-            <Button
-              onClick={handleGetInTouchClick}
-              variant="contained"
-              sx={{
-                px: 4,
-                py: 1.5,
-                fontSize: '16px',
-                fontWeight: 'bold',
-                borderRadius: '5px',
-                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-                ':hover': {
-                  backgroundColor: 'rgba(80, 203, 255)',
-                },
-              }}
+          <Grid item xs={12} sm>
+            <Typography
+              variant="h5"
+              component="h2"
+              textAlign={isMobile ? 'center' : 'left'}
+              gutterBottom
             >
-              {formVisible ? 'Hide Form' : 'Get in Touch'}
-            </Button>
+              Want to delve deeper into the program?
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              textAlign={isMobile ? 'center' : 'left'}
+              paragraph
+            >
+              Share your details to receive expert insights from our program team!
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm="auto">
+            <Box textAlign={isMobile ? 'center' : 'left'}>
+              <Button
+                onClick={handleGetInTouchClick}
+                variant="contained"
+                sx={{
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '16px',
+                  fontWeight: 'bold',
+                  borderRadius: '5px',
+                  boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                  ':hover': {
+                    backgroundColor: 'rgba(80, 203, 255)',
+                  },
+                }}
+              >
+                {formVisible ? 'Hide Form' : 'Get in Touch'}
+              </Button>
+            </Box>
           </Grid>
 
           {formVisible && (
@@ -92,7 +103,7 @@ const Support = () => {
                   borderRadius: '10px',
                   boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
                   padding: '20px',
-                  maxWidth: '600px',
+                  maxWidth: '90%',
                   margin: '0 auto',
                 }}
               >
