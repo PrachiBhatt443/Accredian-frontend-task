@@ -22,7 +22,9 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#1976d2' }}>
+    <AppBar 
+{/*       position="static"  */}
+      sx={{ backgroundColor: '#1976d2' }}>
       <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
           <Typography variant="h6" component="div" sx={{ mr: 2, fontWeight: 'bold' }}>
